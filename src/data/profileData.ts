@@ -163,6 +163,23 @@ export const PROFILE_DATA = {
   // --------------------------------------------------------------------------
   projects: [
     {
+      id: "drag-n-drop",
+      title: "Drag N Drop Workflow Workspace",
+      tagline: "Interactive Drag & Drop Project & Kanban Manager",
+      description:
+        "Modern project management workspace featuring intuitive drag-and-drop Kanban boards, task tracking, and seamless user authentication.",
+      tags: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+      liveUrl: "https://drag-n-drop-lilac.vercel.app/",
+      isFeatured: true,
+      status: "Live",
+      category: "Full Stack",
+      highlights: [
+        "Interactive drag-and-drop Kanban board task manager",
+        "Workspace authentication and task state tracking",
+        "Deployed live on Vercel",
+      ],
+    },
+    {
       id: "fake-news-detector",
       title: "Fake News Detection System",
       tagline: "Real-time Machine Learning Web Application",

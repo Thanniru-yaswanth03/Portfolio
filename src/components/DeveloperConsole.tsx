@@ -105,11 +105,12 @@ export const DeveloperConsole: React.FC = () => {
           type: "output",
           text: (
             <div className="space-y-1.5 font-sans text-xs text-slate-300">
-              <div className="text-indigo-400 font-bold">1. Fake News Detection System [LIVE DEMO]</div>
-              <div>   Real-time ML Classifier with Python & Django backend + responsive UI</div>
+              <div className="text-indigo-400 font-bold">1. Drag N Drop Workflow Workspace [LIVE DEMO]</div>
+              <div>   Kanban task management & workspace automation app</div>
+              <div>   URL: https://drag-n-drop-lilac.vercel.app/</div>
+              <div className="text-emerald-400 font-bold mt-1">2. Fake News Detection System [LIVE DEMO]</div>
+              <div>   Real-time ML Classifier with Python & Django backend</div>
               <div>   URL: https://fakenewsdetectionsystem.pythonanywhere.com/</div>
-              <div className="text-emerald-400 font-bold mt-1">2. Enterprise MERN Task & Analytics Hub</div>
-              <div>   Full-stack React + Node + Express + MongoDB application</div>
             </div>
           ),
         });
