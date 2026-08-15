@@ -15,6 +15,16 @@ export const PortfolioSection: React.FC = () => {
     (p) => filter === "All" || p.category === filter
   );
 
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && selectedProject) {
+        setSelectedProject(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedProject]);
+
   return (
     <section id="portfolio" className="py-24 relative bg-gray-950/90 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -141,8 +151,9 @@ export const PortfolioSection: React.FC = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noreferrer"
+                      aria-label={`GitHub repository for ${project.title}`}
                       className="p-2 rounded-lg bg-gray-900 border border-gray-800 text-gray-300 hover:text-blue-400 hover:border-blue-500/40 transition-colors"
-                      title="View GitHub Code"
+                      title="View GitHub Repository"
                     >
                       <GithubIcon className="w-4 h-4" />
                     </a>
@@ -155,12 +166,20 @@ export const PortfolioSection: React.FC = () => {
 
         {/* Modal Inspector */}
         {selectedProject && (
-          <div className="fixed inset-0 z-50 bg-gray-950/80 backdrop-blur-md flex items-center justify-center p-4">
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-project-title"
+            className="fixed inset-0 z-50 bg-gray-950/80 backdrop-blur-md flex items-center justify-center p-4"
+          >
             <div className="glass-panel p-6 sm:p-8 rounded-2xl max-w-xl w-full border border-gray-700 space-y-4">
               <div className="flex items-center justify-between border-b border-gray-800 pb-3">
-                <h3 className="text-lg font-bold text-white">{selectedProject.title}</h3>
+                <h3 id="modal-project-title" className="text-lg font-bold text-white">
+                  {selectedProject.title}
+                </h3>
                 <button
                   onClick={() => setSelectedProject(null)}
+                  aria-label="Close project modal"
                   className="text-gray-400 hover:text-white text-xs font-mono"
                 >
                   [CLOSE X]
@@ -174,7 +193,7 @@ export const PortfolioSection: React.FC = () => {
                 <div className="text-gray-200 font-bold mb-1">// PROJECT DETAILS</div>
                 <div>Status: {selectedProject.status}</div>
                 <div>Category: {selectedProject.category}</div>
-                <div>Repository: {selectedProject.githubUrl}</div>
+                {selectedProject.githubUrl && <div>Repository: {selectedProject.githubUrl}</div>}
               </div>
 
               <div className="pt-3 flex justify-end">

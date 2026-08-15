@@ -157,6 +157,30 @@ export const DeveloperConsole: React.FC = () => {
         });
         break;
 
+      case "github":
+        newHistory.push({
+          id: (Date.now() + 1).toString(),
+          type: "output",
+          text: (
+            <div className="font-sans text-xs text-indigo-300">
+              GitHub Profile: <a href={PROFILE_DATA.github} target="_blank" rel="noreferrer" className="underline font-bold text-white">{PROFILE_DATA.github}</a>
+            </div>
+          ),
+        });
+        break;
+
+      case "resume":
+        newHistory.push({
+          id: (Date.now() + 1).toString(),
+          type: "output",
+          text: (
+            <div className="font-sans text-xs text-emerald-300">
+              Resume PDF: <a href={PROFILE_DATA.resumePdfUrl} target="_blank" rel="noreferrer" className="underline font-bold text-white">Download Resume</a>
+            </div>
+          ),
+        });
+        break;
+
       case "clear":
         setHistory([]);
         setInputVal("");
@@ -210,8 +234,9 @@ export const DeveloperConsole: React.FC = () => {
             { label: "stack", cmd: "stack" },
             { label: "projects", cmd: "projects" },
             { label: "experience", cmd: "experience" },
-            { label: "whoami", cmd: "whoami" },
             { label: "contact", cmd: "contact" },
+            { label: "github", cmd: "github" },
+            { label: "resume", cmd: "resume" },
             { label: "clear", cmd: "clear" },
           ].map((item) => (
             <button

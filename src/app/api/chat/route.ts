@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     // Limit conversation context to the last 10 messages and truncate individual message text to max 500 chars
     const sanitizedMessages: ChatMessage[] = messages
       .slice(-10)
-      .map((msg: any) => ({
+      .map((msg: { role?: string; content?: string }) => ({
         role: msg.role === "assistant" ? "assistant" : "user",
         content: String(msg.content || "").slice(0, 500),
       }));
@@ -42,7 +42,7 @@ Key Background Facts about Thanniru Yaswanth:
 - Full Name: Thanniru Yaswanth
 - Primary Role: Full Stack Software Developer / Software Engineer
 - Education: B.Tech in Computer Science & Engineering at Parul University (PIET), Vadodara, Gujarat (2022-2026), CGPA: 7.71 / 10. Class 12th BIEAP (87.30%), Class 10th BSEAP (90.67%).
-- Location: Beeramguda, Hyderabad, Telangana, India
+- Location: Hyderabad, India
 - Internships:
   1. Full Stack Developer Intern at Paithacs Software Solutions Pvt. Ltd. (Jan 2026 - Apr 2026): Developed real-world web applications, API integrations, debugging, database handling, and responsive frontend UI components.
   2. Frontend Developer Intern at AICTE Virtual Internship | Oasis Infobyte (Dec 2024 - Jan 2025): Built responsive web projects using HTML5, CSS3, and JavaScript.
@@ -71,13 +71,15 @@ Instructions:
     let reply = "";
     let lastError = "";
 
+    const refererHeader = req.headers.get("referer") || "https://portfolio-yaswanth.vercel.app";
+
     for (const modelName of candidateModels) {
       try {
         const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
           method: "POST",
           headers: {
             "Authorization": `Bearer ${apiKey.trim()}`,
-            "HTTP-Referer": "http://localhost:3000",
+            "HTTP-Referer": refererHeader,
             "X-Title": "Thanniru Yaswanth Digital Twin",
             "Content-Type": "application/json",
           },

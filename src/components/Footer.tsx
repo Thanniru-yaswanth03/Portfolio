@@ -33,10 +33,10 @@ export const Footer: React.FC = () => {
           {/* Nav links */}
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-300">
             <a href="#about" className="hover:text-indigo-400 transition-colors">About</a>
-            <a href="#journey" className="hover:text-indigo-400 transition-colors">Journey</a>
+            <a href="#portfolio" className="hover:text-indigo-400 transition-colors">Projects</a>
+            <a href="#journey" className="hover:text-indigo-400 transition-colors">Experience</a>
             <a href="#skills" className="hover:text-indigo-400 transition-colors">Skills</a>
             <a href="#console" className="hover:text-indigo-400 transition-colors">Console</a>
-            <a href="#portfolio" className="hover:text-indigo-400 transition-colors">Projects</a>
             <a href="#contact" className="hover:text-indigo-400 transition-colors">Contact</a>
           </div>
 
@@ -46,6 +46,7 @@ export const Footer: React.FC = () => {
               href={PROFILE_DATA.github}
               target="_blank"
               rel="noreferrer"
+              aria-label="GitHub Profile"
               className="p-2.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-indigo-400 hover:border-indigo-500/40 transition-colors"
               title="GitHub"
             >
@@ -55,6 +56,7 @@ export const Footer: React.FC = () => {
               href={PROFILE_DATA.linkedin}
               target="_blank"
               rel="noreferrer"
+              aria-label="LinkedIn Profile"
               className="p-2.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-indigo-400 hover:border-indigo-500/40 transition-colors"
               title="LinkedIn"
             >
@@ -64,6 +66,7 @@ export const Footer: React.FC = () => {
               href={PROFILE_DATA.leetcode}
               target="_blank"
               rel="noreferrer"
+              aria-label="LeetCode Profile"
               className="p-2.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400 hover:border-emerald-500/40 transition-colors"
               title="LeetCode"
             >
@@ -71,6 +74,7 @@ export const Footer: React.FC = () => {
             </a>
             <button
               onClick={scrollToTop}
+              aria-label="Scroll to top of page"
               className="p-2.5 rounded-full modern-button-primary text-white ml-2 cursor-pointer shadow-md"
               title="Scroll To Top"
             >

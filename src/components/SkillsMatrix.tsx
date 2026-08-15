@@ -68,31 +68,21 @@ export const SkillsMatrix: React.FC = () => {
               </span>
             </div>
 
-            <div className="space-y-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {PROFILE_DATA.skills[activeCategory].skills.map((skill, sIdx) => (
-                <div key={sIdx} className="space-y-2">
-                  <div className="flex items-center justify-between text-xs sm:text-sm">
-                    <span className="font-semibold text-gray-200 flex items-center gap-2">
-                      <Terminal className="w-3.5 h-3.5 text-blue-400" />
-                      {skill.name}
-                    </span>
-                    <div className="flex items-center gap-3 font-mono">
-                      {skill.tag && (
-                        <span className="text-[10px] bg-gray-900 text-gray-400 px-2 py-0.5 rounded border border-gray-800">
-                          {skill.tag}
-                        </span>
-                      )}
-                      <span className="text-blue-400 font-bold">{skill.level}%</span>
+                <div
+                  key={sIdx}
+                  className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between space-y-2 hover:border-indigo-500/40 transition-colors"
+                >
+                  <div className="flex items-center gap-2 text-slate-100 font-semibold text-sm">
+                    <Terminal className="w-4 h-4 text-indigo-400 shrink-0" />
+                    <span>{skill.name}</span>
+                  </div>
+                  {skill.tag && (
+                    <div className="text-[11px] font-mono text-indigo-300 bg-indigo-950/60 px-2.5 py-1 rounded border border-indigo-500/20 w-fit">
+                      {skill.tag}
                     </div>
-                  </div>
-
-                  {/* Progress Bar */}
-                  <div className="h-2.5 w-full bg-gray-900 rounded-full overflow-hidden border border-gray-800 p-0.5">
-                    <div
-                      className="h-full bg-gradient-to-r from-blue-500 via-indigo-500 to-emerald-500 rounded-full transition-all duration-700 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
+                  )}
                 </div>
               ))}
             </div>

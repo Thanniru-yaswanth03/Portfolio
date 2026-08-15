@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thanniru Yaswanth — Full Stack Software Developer Portfolio
 
-## Getting Started
+Official personal portfolio website for **Thanniru Yaswanth**, Full Stack Software Developer. Built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS**.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- **Interactive Hero & Showcase:** Modern dark-theme layout with typed headlines, quick stats, and social profiles.
+- **Featured Projects:** Recruiter-friendly showcases of live web applications and machine learning integrations.
+- **Career & Academic Track:** Timeline view of software engineering internships and academic milestones.
+- **Skills Matrix:** Categorized breakdown of Frontend, Backend, Languages, and DevTools without arbitrary progress percentages.
+- **Interactive Developer Console:** Lightweight in-browser terminal supporting interactive profile inspection commands (`help`, `about`, `projects`, `skills`, `experience`, `contact`, `github`, `resume`, `clear`).
+- **AI Digital Twin Assistant:** Floating chat drawer powered by OpenRouter AI API to answer recruiter inquiries.
+- **Direct Email Contact Form:** Form handling with validation and mail app fallbacks.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS (v4) & Custom Glassmorphism CSS
+- **Icons:** Lucide React & Custom SVG Icons
+- **AI Integration:** OpenRouter API (Server-side API Route)
+
+---
+
+## ⚡ Getting Started Locally
+
+### 1. Prerequisites
+- Node.js 18.x or higher
+- npm (or yarn / pnpm / bun)
+
+### 2. Installation
+Clone the repository and install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Thanniru-yaswanth03/Portfolio.git
+cd Portfolio
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Environment Variables Setup
+Create a `.env` file in the project root:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run Development Server
+```bash
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Production Build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To test the production build locally:
 
-## Deploy on Vercel
+```bash
+npm run build
+npm run start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deploying to Vercel
+
+1. Push your code to [GitHub](https://github.com/Thanniru-yaswanth03/Portfolio).
+2. Log in to [Vercel](https://vercel.com) and click **Add New...** -> **Project**.
+3. Import the `Portfolio` repository.
+4. Under **Environment Variables**, set:
+   - **Name:** `OPENROUTER_API_KEY`
+   - **Value:** `<your_openrouter_api_key>`
+5. Click **Deploy**.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).

@@ -35,10 +35,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutSection />
+      <PortfolioSection />
       <ExperienceTimeline />
       <SkillsMatrix />
       <DeveloperConsole />
-      <PortfolioSection />
       <ContactSection />
       <DigitalTwinChat />
       <Footer />

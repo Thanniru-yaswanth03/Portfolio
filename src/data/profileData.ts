@@ -46,7 +46,7 @@ export interface ProjectItem {
 export interface SkillCategory {
   title: string;
   iconName: string;
-  skills: { name: string; level: number; tag?: string }[];
+  skills: { name: string; tag?: string }[];
 }
 
 export const PROFILE_DATA = {
@@ -57,17 +57,14 @@ export const PROFILE_DATA = {
   handle: "@yaswanth_dev",
   title: "Full Stack Software Developer",
   typewriterText: "Building modern web apps. Designing REST APIs. Solving complex problems.",
-  statusTag: "OPEN FOR SOFTWARE DEVELOPER ROLES", // Update your availability status here
-  location: "Hyderabad, Telangana, India",
-  fullAddress: "Ikrisat Colony, Beeramguda, Telangana 502032",
+  statusTag: "OPEN FOR SOFTWARE DEVELOPER ROLES",
+  location: "Hyderabad, India",
   phone: "+91 9515807159",
-  alternatePhone: "+91 9949948759",
   email: "yash1th2k4@gmail.com",
-  academicEmail: "2203031260217@paruluniversity.ac.in",
   linkedin: "https://linkedin.com/in/thanniru-yaswanth-0a26b931a",
   github: "https://github.com/Thanniru-yaswanth03",
   leetcode: "https://leetcode.com/u/yash1th03/",
-  resumePdfUrl: "/Thanniru Yaswanth Resume (1).pdf", // Place updated resume PDF in public/ folder
+  resumePdfUrl: "/Thanniru Yaswanth Resume (1).pdf",
 
   // --------------------------------------------------------------------------
   // 2. HERO SECTION QUICK STATS
@@ -102,7 +99,7 @@ export const PROFILE_DATA = {
     {
       title: "Machine Learning Integration",
       icon: "Cpu",
-      description: "Engineered real-time Machine Learning web applications (e.g. Fake News Classifier) integrated with Django and deployed live.",
+      description: "Engineered real-time Machine Learning web applications integrated with Django backend services.",
     },
     {
       title: "Algorithms & Core CS",
@@ -148,7 +145,7 @@ export const PROFILE_DATA = {
   ] as EducationItem[],
 
   // --------------------------------------------------------------------------
-  // 6. WORK EXPERIENCE TIMELINE (Add or edit jobs & internships here)
+  // 6. WORK EXPERIENCE TIMELINE
   // --------------------------------------------------------------------------
   experiences: [
     {
@@ -158,11 +155,11 @@ export const PROFILE_DATA = {
       period: "Jan 2026 - Apr 2026",
       type: "Internship",
       description: [
-        "Worked on real-world web applications using modern frontend and backend technologies.",
-        "Collaborated on project development, API integrations, debugging, and database management.",
-        "Implemented responsive UI components, version control with Git/GitHub, and agile software practices.",
+        "Engineered responsive UI components and backend REST API integrations using React, Node.js, and MongoDB.",
+        "Collaborated on database schema design, application debugging, and agile code review workflows.",
+        "Managed version control and team code merges using Git and GitHub.",
       ],
-      skills: ["React.js", "Node.js", "Express", "MongoDB", "API Integration", "Git/GitHub"],
+      skills: ["React.js", "Node.js", "Express", "MongoDB", "REST APIs", "Git/GitHub"],
       badgeColor: "blue",
     },
     {
@@ -172,8 +169,8 @@ export const PROFILE_DATA = {
       period: "15 Dec 2024 - 20 Jan 2025",
       type: "Virtual Internship",
       description: [
-        "Completed a Frontend Development Internship, building responsive web projects using HTML5, CSS3, and JavaScript.",
-        "Gained hands-on software development experience contributing to real application UI features.",
+        "Developed structured frontend interfaces using standard HTML5, CSS3, and modern JavaScript.",
+        "Created mobile-friendly responsive pages and implemented interactive DOM state handlers.",
       ],
       skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "DOM Manipulation"],
       badgeColor: "emerald",
@@ -181,44 +178,44 @@ export const PROFILE_DATA = {
   ] as ExperienceItem[],
 
   // --------------------------------------------------------------------------
-  // 7. TECH STACK & SKILLS MATRIX (Update percentages or skill tags here)
+  // 7. TECH STACK & SKILLS MATRIX
   // --------------------------------------------------------------------------
   skills: [
     {
       title: "Frontend Engineering",
       iconName: "Layout",
       skills: [
-        { name: "React.js / Next.js", level: 90, tag: "UI Framework" },
-        { name: "JavaScript (ES6+) / TypeScript", level: 88, tag: "Language" },
-        { name: "HTML5 / CSS3 / Tailwind CSS", level: 92, tag: "Styling" },
-        { name: "DOM Manipulation & State", level: 88, tag: "Frontend" },
+        { name: "React.js / Next.js", tag: "UI Library" },
+        { name: "JavaScript (ES6+) / TypeScript", tag: "Core Languages" },
+        { name: "HTML5 / CSS3 / Tailwind CSS", tag: "Layout & Styling" },
+        { name: "DOM & Client State Management", tag: "Frontend Architecture" },
       ],
     },
     {
       title: "Backend & Databases",
       iconName: "Server",
       skills: [
-        { name: "Node.js / Express.js", level: 86, tag: "Backend Runtime" },
-        { name: "Python / Django", level: 82, tag: "Web Framework" },
-        { name: "MongoDB / SQL Databases", level: 84, tag: "Database" },
-        { name: "RESTful API Development", level: 88, tag: "API Design" },
+        { name: "Node.js / Express.js", tag: "JavaScript Runtime" },
+        { name: "Python / Django", tag: "Web Framework" },
+        { name: "MongoDB / SQL Databases", tag: "Data Storage" },
+        { name: "RESTful API Engineering", tag: "API Architecture" },
       ],
     },
     {
-      title: "Languages & Computer Science",
+      title: "Languages & Core CS",
       iconName: "Code",
       skills: [
-        { name: "Java", level: 85, tag: "OOP" },
-        { name: "Python", level: 88, tag: "Scripting / ML" },
-        { name: "C / C++", level: 82, tag: "Systems" },
-        { name: "Data Structures & Algorithms", level: 86, tag: "Problem Solving" },
-        { name: "Git & GitHub Version Control", level: 90, tag: "DevTools" },
+        { name: "Java", tag: "Object-Oriented Programming" },
+        { name: "Python", tag: "Scripting & Backend Logic" },
+        { name: "C / C++", tag: "Systems Programming" },
+        { name: "Data Structures & Algorithms", tag: "Problem Solving" },
+        { name: "Git & GitHub", tag: "Version Control" },
       ],
     },
   ] as SkillCategory[],
 
   // --------------------------------------------------------------------------
-  // 8. PROJECTS & PORTFOLIO HUB (Add new projects or update live links here)
+  // 8. PROJECTS & PORTFOLIO HUB
   // --------------------------------------------------------------------------
   projects: [
     {
@@ -226,51 +223,47 @@ export const PROFILE_DATA = {
       title: "Fake News Detection System",
       tagline: "Real-time Machine Learning Web Application",
       description:
-        "Developed a machine learning-based web application to classify news articles as real or fake in real time. Built a responsive frontend with HTML, CSS, and JavaScript, paired with Python & Django backend integration.",
-      tags: ["Python", "Django", "Machine Learning", "JavaScript", "HTML/CSS", "PythonAnywhere"],
+        "Machine learning web application that classifies news articles as real or fake in real time. Features a Python & Django backend engine paired with a responsive frontend.",
+      tags: ["Python", "Django", "Machine Learning", "JavaScript", "HTML/CSS"],
       liveUrl: "https://fakenewsdetectionsystem.pythonanywhere.com/",
-      githubUrl: "https://github.com/Thanniru-yaswanth03",
       isFeatured: true,
       status: "Live",
       category: "Machine Learning",
       highlights: [
-        "ML article classification engine integrated with Django framework",
-        "Responsive user interface with DOM manipulation and instant prediction feedback",
-        "Secure user authentication and full frontend-backend integration",
-        "Hosted live on PythonAnywhere web platform",
+        "ML classification engine integrated with Django web service",
+        "Instant prediction interface with client-side validation",
+        "Hosted live on PythonAnywhere",
       ],
     },
     {
       id: "fullstack-dashboard",
-      title: "Enterprise MERN Task & Analytics Hub",
-      tagline: "Scalable Full-Stack Task & Workflow Platform",
+      title: "Enterprise MERN Task Hub",
+      tagline: "Scalable Task & Workflow Platform",
       description:
-        "A clean full-stack web application for task tracking, user auth, dynamic data dashboards, and real-time state management using React, Express, and MongoDB.",
+        "Full-stack web application for task management, user authentication, and data analytics built with React, Node.js, Express, and MongoDB.",
       tags: ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-      githubUrl: "https://github.com/Thanniru-yaswanth03",
       isFeatured: false,
       status: "In Development",
       category: "Full Stack",
       highlights: [
         "Modular React component architecture with clean state management",
-        "REST API endpoints with Express and MongoDB database connection",
-        "Modern dark-mode UI with clean responsive layouts",
+        "Express REST API endpoints backed by MongoDB",
+        "Responsive dark mode interface",
       ],
     },
     {
       id: "algorithm-visualizer",
-      title: "Data Structures & Algorithm Sandbox",
+      title: "Data Structures & Algorithm Visualizer",
       tagline: "Interactive DSA & Logic Playground",
       description:
-        "An interactive web platform demonstrating common Data Structures and Sorting/Searching Algorithms visually for computer science learning.",
+        "Interactive web application providing visual step-by-step demonstrations of fundamental sorting and searching algorithms.",
       tags: ["JavaScript", "HTML5 Canvas", "Algorithms", "CSS3"],
-      githubUrl: "https://github.com/Thanniru-yaswanth03",
       isFeatured: false,
       status: "Featured",
       category: "Web App",
       highlights: [
-        "Visual step-by-step execution for Array, Tree, and Graph algorithms",
-        "Interactive controls for array size, speed, and dataset generation",
+        "Step-by-step array and sorting execution visualizer",
+        "Interactive speed and dataset controls",
       ],
     },
   ] as ProjectItem[],
@@ -279,10 +272,7 @@ export const PROFILE_DATA = {
   // 9. PERSONAL DETAILS & HOBBIES
   // --------------------------------------------------------------------------
   personalDetails: {
-    dob: "September 03, 2004",
-    gender: "Male",
-    maritalStatus: "Single",
     languages: ["English (Fluent)", "Telugu (Native)", "Hindi (Professional)"],
-    hobbies: ["Tech Reading & Coding", "Esports", "Exploring New Technologies", "Sports"],
+    hobbies: ["Technical Reading & Coding", "Problem Solving", "Exploring Web Frameworks"],
   },
 };

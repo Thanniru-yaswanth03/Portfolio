@@ -4,7 +4,7 @@ import React from "react";
 import { PROFILE_DATA } from "@/data/profileData";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import { ArrowRight, ExternalLink, Code2, Server, CheckCircle2, Layers, Sparkles, User, Briefcase, GraduationCap } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { GithubIcon, LinkedinIcon, LeetCodeIcon } from "@/components/Icons";
 
 export const Hero: React.FC = () => {
   const typedText = useTypewriter(PROFILE_DATA.typewriterText);
@@ -49,44 +49,59 @@ export const Hero: React.FC = () => {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
-                href="#journey"
+                href="#portfolio"
                 className="modern-button-primary px-7 py-3.5 text-sm flex items-center gap-2.5 group"
               >
-                <span>Explore Career Journey</span>
+                <span>View Projects</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
 
               <a
-                href="#portfolio"
+                href={PROFILE_DATA.resumePdfUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="modern-button-outline px-6 py-3.5 text-sm flex items-center gap-2"
               >
                 <Layers className="w-4 h-4 text-indigo-400" />
-                <span>Featured Projects</span>
+                <span>Resume</span>
               </a>
 
-              <a
-                href={PROFILE_DATA.github}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub Profile"
-                className="p-3.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-indigo-400 hover:border-indigo-500/40 transition-colors"
-                title="GitHub Profile"
-              >
-                <GithubIcon className="w-5 h-5" />
-              </a>
+              <div className="flex items-center gap-2">
+                <a
+                  href={PROFILE_DATA.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub Profile"
+                  className="p-3.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-indigo-400 hover:border-indigo-500/40 transition-colors"
+                  title="GitHub Profile"
+                >
+                  <GithubIcon className="w-5 h-5" />
+                </a>
 
-              <a
-                href={PROFILE_DATA.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn Profile"
-                className="p-3.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-indigo-400 hover:border-indigo-500/40 transition-colors"
-                title="LinkedIn Profile"
-              >
-                <LinkedinIcon className="w-5 h-5" />
-              </a>
+                <a
+                  href={PROFILE_DATA.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn Profile"
+                  className="p-3.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-indigo-400 hover:border-indigo-500/40 transition-colors"
+                  title="LinkedIn Profile"
+                >
+                  <LinkedinIcon className="w-5 h-5" />
+                </a>
+
+                <a
+                  href={PROFILE_DATA.leetcode}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LeetCode Profile"
+                  className="p-3.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400 hover:border-emerald-500/40 transition-colors"
+                  title="LeetCode Profile"
+                >
+                  <LeetCodeIcon className="w-5 h-5" />
+                </a>
+              </div>
             </div>
 
             {/* Stats Row */}

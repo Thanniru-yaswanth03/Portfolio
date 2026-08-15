@@ -127,7 +127,6 @@ export const ContactSection: React.FC = () => {
               <div>
                 <div className="text-xs text-slate-400 font-mono">LOCATION</div>
                 <div className="text-sm font-bold text-white">{PROFILE_DATA.location}</div>
-                <div className="text-[11px] text-slate-400">{PROFILE_DATA.fullAddress}</div>
               </div>
             </div>
 

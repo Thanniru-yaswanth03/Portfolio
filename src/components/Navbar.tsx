@@ -29,10 +29,10 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { label: "About", href: "#about" },
-    { label: "Journey", href: "#journey" },
+    { label: "Projects", href: "#portfolio" },
+    { label: "Experience", href: "#journey" },
     { label: "Skills", href: "#skills" },
     { label: "Console", href: "#console" },
-    { label: "Projects", href: "#portfolio" },
     { label: "Contact", href: "#contact" },
   ];
 
