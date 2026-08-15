@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { PROFILE_DATA } from "@/data/profileData";
-import { Terminal as TerminalIcon, Play, RotateCcw, Copy, Check, Sparkles, Code2 } from "lucide-react";
+import { Play, RotateCcw, Copy, Check, Code2 } from "lucide-react";
 
 interface ConsoleLine {
   id: string;
@@ -39,15 +39,18 @@ export const DeveloperConsole: React.FC = () => {
     const trimmed = cmdStr.trim().toLowerCase();
     if (!trimmed) return;
 
+    const inputId = `in-${history.length + 1}`;
+    const outputId = `out-${history.length + 2}`;
+
     const newHistory: ConsoleLine[] = [
       ...history,
-      { id: Date.now().toString(), type: "input", text: `explore > ${cmdStr}` },
+      { id: inputId, type: "input", text: `explore > ${cmdStr}` },
     ];
 
     switch (trimmed) {
       case "help":
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "output",
           text: (
             <div className="space-y-1.5 text-slate-300 font-sans text-xs">
@@ -66,7 +69,7 @@ export const DeveloperConsole: React.FC = () => {
 
       case "about":
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "output",
           text: (
             <div className="space-y-1.5 font-sans text-xs text-slate-300">
@@ -83,7 +86,7 @@ export const DeveloperConsole: React.FC = () => {
       case "stack":
       case "skills":
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "output",
           text: (
             <div className="space-y-1.5 font-sans text-xs text-slate-300">
@@ -98,7 +101,7 @@ export const DeveloperConsole: React.FC = () => {
 
       case "projects":
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "output",
           text: (
             <div className="space-y-1.5 font-sans text-xs text-slate-300">
@@ -114,7 +117,7 @@ export const DeveloperConsole: React.FC = () => {
 
       case "experience":
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "output",
           text: (
             <div className="space-y-1.5 font-sans text-xs text-slate-300">
@@ -129,7 +132,7 @@ export const DeveloperConsole: React.FC = () => {
 
       case "whoami":
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "output",
           text: (
             <div className="font-sans text-xs text-indigo-300 font-semibold">
@@ -142,7 +145,7 @@ export const DeveloperConsole: React.FC = () => {
       case "contact":
       case "hire":
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "output",
           text: (
             <div className="space-y-1 font-sans text-xs text-slate-300 bg-indigo-950/40 p-3 rounded-xl border border-indigo-500/30">
@@ -159,7 +162,7 @@ export const DeveloperConsole: React.FC = () => {
 
       case "github":
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "output",
           text: (
             <div className="font-sans text-xs text-indigo-300">
@@ -171,7 +174,7 @@ export const DeveloperConsole: React.FC = () => {
 
       case "resume":
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "output",
           text: (
             <div className="font-sans text-xs text-emerald-300">
@@ -188,7 +191,7 @@ export const DeveloperConsole: React.FC = () => {
 
       default:
         newHistory.push({
-          id: (Date.now() + 1).toString(),
+          id: outputId,
           type: "error",
           text: (
             <div className="font-sans text-xs text-rose-400">

@@ -44,7 +44,7 @@ export const ContactSection: React.FC = () => {
           colors: ["#3B82F6", "#6366F1", "#10B981"],
         });
       }
-    } catch (err: unknown) {
+    } catch {
       setErrorMessage("Network connection error. Please try sending via your email app.");
     } finally {
       setLoading(false);

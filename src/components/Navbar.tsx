@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { PROFILE_DATA } from "@/data/profileData";
-import { Code2, FileText, Menu, X, ExternalLink, Sparkles } from "lucide-react";
+import { Code2, FileText, Menu, X, ExternalLink } from "lucide-react";
 import confetti from "canvas-confetti";
 
 export const Navbar: React.FC = () => {

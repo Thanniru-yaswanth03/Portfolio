@@ -80,7 +80,7 @@ export const DigitalTwinChat: React.FC = () => {
           },
         ]);
       }
-    } catch (err: unknown) {
+    } catch {
       setMessages((prev) => [
         ...prev,
         {

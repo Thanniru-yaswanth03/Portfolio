@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             </div>
             <div>
               <div className="font-extrabold text-white text-sm">
-                THANNIRU YASWANTH <span className="text-indigo-400 font-mono text-xs font-normal">// DEV</span>
+                THANNIRU YASWANTH <span className="text-indigo-400 font-mono text-xs font-normal">{"// DEV"}</span>
               </div>
               <div className="text-[11px] text-slate-400">
                 Full Stack Software Developer

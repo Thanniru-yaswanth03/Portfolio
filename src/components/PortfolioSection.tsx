@@ -190,7 +190,7 @@ export const PortfolioSection: React.FC = () => {
               <p className="text-sm text-gray-300">{selectedProject.description}</p>
 
               <div className="p-3 rounded bg-gray-900 border border-gray-800 font-mono text-xs text-gray-400 space-y-1">
-                <div className="text-gray-200 font-bold mb-1">// PROJECT DETAILS</div>
+                <div className="text-gray-200 font-bold mb-1">{"// PROJECT DETAILS"}</div>
                 <div>Status: {selectedProject.status}</div>
                 <div>Category: {selectedProject.category}</div>
                 {selectedProject.githubUrl && <div>Repository: {selectedProject.githubUrl}</div>}
