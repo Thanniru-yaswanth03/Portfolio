@@ -8,6 +8,7 @@ import { DeveloperConsole } from "@/components/DeveloperConsole";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { ContactSection } from "@/components/ContactSection";
 import { DigitalTwinChat } from "@/components/DigitalTwinChat";
+import { BackToTop } from "@/components/BackToTop";
 import { Footer } from "@/components/Footer";
 
 export const metadata = {
@@ -41,6 +42,7 @@ export default function Home() {
       <DeveloperConsole />
       <ContactSection />
       <DigitalTwinChat />
+      <BackToTop />
       <Footer />
     </main>
   );

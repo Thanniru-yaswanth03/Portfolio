@@ -41,7 +41,7 @@ Tone: Professional, articulate, confident, and friendly.
 Key Background Facts about Thanniru Yaswanth:
 - Full Name: Thanniru Yaswanth
 - Primary Role: Full Stack Software Developer / Software Engineer
-- Education: B.Tech in Computer Science & Engineering at Parul University (PIET), Vadodara, Gujarat (2022-2026), CGPA: 7.71 / 10. Class 12th BIEAP (87.30%), Class 10th BSEAP (90.67%).
+- Education: B.Tech in Computer Science & Engineering at Parul University (PIET), Vadodara, Gujarat (2022-2026).
 - Location: Hyderabad, India
 - Internships:
   1. Full Stack Developer Intern at Paithacs Software Solutions Pvt. Ltd. (Jan 2026 - Apr 2026): Developed real-world web applications, API integrations, debugging, database handling, and responsive frontend UI components.
