@@ -75,7 +75,7 @@ export const DeveloperConsole: React.FC = () => {
             <div className="space-y-1.5 font-sans text-xs text-slate-300">
               <div className="text-indigo-400 font-bold">{PROFILE_DATA.name}</div>
               <div>Title: {PROFILE_DATA.title}</div>
-              <div>Education: B.Tech CSE at Parul University (2022-2026) | CGPA: 7.71 / 10</div>
+              <div>Education: B.Tech CSE at Parul University (2022-2026)</div>
               <div>Location: {PROFILE_DATA.location}</div>
               <div className="text-slate-400 mt-1">{PROFILE_DATA.summary}</div>
             </div>

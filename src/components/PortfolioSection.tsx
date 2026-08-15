@@ -6,14 +6,7 @@ import { FolderGit2, ExternalLink, CheckCircle2, Eye } from "lucide-react";
 import { GithubIcon } from "@/components/Icons";
 
 export const PortfolioSection: React.FC = () => {
-  const [filter, setFilter] = useState<string>("All");
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
-
-  const categories = ["All", "Machine Learning", "Full Stack", "Web App"];
-
-  const filteredProjects = PROFILE_DATA.projects.filter(
-    (p) => filter === "All" || p.category === filter
-  );
 
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -26,83 +19,50 @@ export const PortfolioSection: React.FC = () => {
   }, [selectedProject]);
 
   return (
-    <section id="portfolio" className="py-24 relative bg-gray-950/90 border-t border-gray-800">
+    <section id="portfolio" className="py-20 relative bg-gray-950/90 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-14">
+        <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/60 border border-blue-500/30 text-blue-400 text-xs font-mono mb-3">
-            <FolderGit2 className="w-3.5 h-3.5" /> PORTFOLIO & PROJECTS
+            <FolderGit2 className="w-3.5 h-3.5" /> PORTFOLIO
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Projects</span>
           </h2>
-          <p className="mt-3 text-gray-400 max-w-xl text-sm sm:text-base">
-            Web applications, machine learning integration, and software project blueprints.
-          </p>
-
-          {/* Filter Pills */}
-          <div className="flex items-center gap-2 mt-8 flex-wrap justify-center">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                  filter === cat
-                    ? "bg-blue-600 text-white font-bold shadow-lg shadow-blue-950/50"
-                    : "bg-gray-900 border border-gray-800 text-gray-400 hover:text-white"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project: ProjectItem) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {PROFILE_DATA.projects.map((project: ProjectItem) => (
             <div
               key={project.id}
-              className={`glass-panel glass-panel-hover rounded-2xl p-6 border flex flex-col justify-between relative overflow-hidden ${
-                project.isFeatured ? "border-blue-500/50 shadow-xl shadow-blue-950/20" : "border-gray-800"
-              }`}
+              className="glass-panel rounded-2xl p-6 border border-gray-800 flex flex-col justify-between hover:border-slate-700 transition-colors"
             >
-              {/* Featured Ribbon */}
-              {project.isFeatured && (
-                <div className="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-extrabold font-mono px-3 py-1 rounded-bl-xl">
-                  FEATURED LIVE APP
-                </div>
-              )}
-
               <div>
-                {/* Category & Status */}
-                <div className="flex items-center gap-2 mb-4 flex-wrap">
-                  <span className="px-2.5 py-1 rounded bg-gray-900 border border-gray-800 text-gray-300 font-mono text-[11px]">
-                    {project.category}
-                  </span>
+                {/* Status Badge */}
+                <div className="flex items-center justify-between mb-3">
                   <span
-                    className={`px-2.5 py-1 rounded font-mono text-[11px] font-bold ${
+                    className={`px-2.5 py-0.5 rounded font-mono text-[10px] font-extrabold tracking-wide ${
                       project.status === "Live"
                         ? "bg-emerald-950/80 text-emerald-400 border border-emerald-500/30"
                         : "bg-blue-950/80 text-blue-400 border border-blue-500/30"
                     }`}
                   >
-                    STATUS: {project.status}
+                    {project.status.toUpperCase()}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2">
                   {project.title}
                 </h3>
-                <p className="text-xs font-mono text-blue-400/90 mb-3">{project.tagline}</p>
-                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-4">
                   {project.description}
                 </p>
 
                 {/* Highlights */}
-                <div className="space-y-1.5 mb-6">
-                  {project.highlights.map((hl, hIdx) => (
+                <div className="space-y-1.5 mb-5">
+                  {project.highlights.slice(0, 2).map((hl, hIdx) => (
                     <div key={hIdx} className="text-xs text-gray-300 flex items-start gap-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                       <span>{hl}</span>
@@ -113,7 +73,7 @@ export const PortfolioSection: React.FC = () => {
 
               <div>
                 {/* Tag Pills */}
-                <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-gray-800">
+                <div className="flex flex-wrap gap-1.5 mb-5 pt-3 border-t border-gray-800">
                   {project.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
@@ -124,7 +84,7 @@ export const PortfolioSection: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Buttons */}
+                {/* Action Buttons */}
                 <div className="flex items-center gap-3">
                   {project.liveUrl ? (
                     <a
@@ -134,7 +94,7 @@ export const PortfolioSection: React.FC = () => {
                       className="dev-button-primary px-4 py-2 text-xs flex-1 flex items-center justify-center gap-1.5"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
-                      <span>Launch Live Demo</span>
+                      <span>Live Demo</span>
                     </a>
                   ) : (
                     <button
@@ -142,7 +102,7 @@ export const PortfolioSection: React.FC = () => {
                       className="dev-button-outline px-4 py-2 text-xs flex-1 flex items-center justify-center gap-1.5"
                     >
                       <Eye className="w-3.5 h-3.5" />
-                      <span>Inspect Blueprint</span>
+                      <span>View Details</span>
                     </button>
                   )}
 
@@ -186,11 +146,9 @@ export const PortfolioSection: React.FC = () => {
                 </button>
               </div>
 
-              <div className="text-xs font-mono text-blue-400">{selectedProject.tagline}</div>
               <p className="text-sm text-gray-300">{selectedProject.description}</p>
 
               <div className="p-3 rounded bg-gray-900 border border-gray-800 font-mono text-xs text-gray-400 space-y-1">
-                <div className="text-gray-200 font-bold mb-1">{"// PROJECT DETAILS"}</div>
                 <div>Status: {selectedProject.status}</div>
                 <div>Category: {selectedProject.category}</div>
                 {selectedProject.githubUrl && <div>Repository: {selectedProject.githubUrl}</div>}
@@ -201,7 +159,7 @@ export const PortfolioSection: React.FC = () => {
                   onClick={() => setSelectedProject(null)}
                   className="dev-button-primary px-5 py-2 text-xs"
                 >
-                  Close Modal
+                  Close
                 </button>
               </div>
             </div>

@@ -56,7 +56,7 @@ export const PROFILE_DATA = {
   name: "Thanniru Yaswanth",
   handle: "@yaswanth_dev",
   title: "Full Stack Software Developer",
-  typewriterText: "Building modern web apps. Designing REST APIs. Solving complex problems.",
+  typewriterText: "I build web applications and backend systems.",
   statusTag: "OPEN FOR SOFTWARE DEVELOPER ROLES",
   location: "Hyderabad, India",
   phone: "+91 9515807159",
@@ -67,49 +67,13 @@ export const PROFILE_DATA = {
   resumePdfUrl: "/Thanniru Yaswanth Resume (1).pdf",
 
   // --------------------------------------------------------------------------
-  // 2. HERO SECTION QUICK STATS
-  // --------------------------------------------------------------------------
-  heroStats: [
-    { label: "B.Tech CGPA", value: "7.71", subtext: "Parul University" },
-    { label: "Main Stack", value: "MERN Stack", subtext: "React, Node, Mongo" },
-    { label: "LeetCode", value: "@yash1th03", subtext: "Data Structures & Alg" },
-    { label: "Languages", value: "Java & Python", subtext: "OOPs & Problem Solving" },
-  ],
-
-  // --------------------------------------------------------------------------
-  // 3. PROFESSIONAL SUMMARY
+  // 2. PROFESSIONAL SUMMARY / ABOUT
   // --------------------------------------------------------------------------
   summary:
-    "Full Stack Software Developer passionate about engineering responsive web applications, designing scalable APIs, and writing clean, efficient code. Experienced in React, Node.js, Express, MongoDB, Python/Django, and Data Structures & Algorithms.",
+    "I'm a final-year Computer Science student focused on full-stack development and backend engineering. I enjoy building practical web applications, working with APIs and databases, and solving problems with data structures and algorithms.",
 
   // --------------------------------------------------------------------------
-  // 4. ABOUT SECTION PILLARS
-  // --------------------------------------------------------------------------
-  aboutCards: [
-    {
-      title: "Full-Stack Web Development",
-      icon: "Code2",
-      description: "Proficient in building modern single-page applications with React.js, Next.js, Node.js, Express, and MongoDB.",
-    },
-    {
-      title: "Backend & API Engineering",
-      icon: "Server",
-      description: "Experienced in constructing robust REST APIs, server-side business logic in Python/Django, and optimizing database queries.",
-    },
-    {
-      title: "Machine Learning Integration",
-      icon: "Cpu",
-      description: "Engineered real-time Machine Learning web applications integrated with Django backend services.",
-    },
-    {
-      title: "Algorithms & Core CS",
-      icon: "Terminal",
-      description: "Solid foundation in Data Structures, Algorithms, Object-Oriented Programming (Java/C++), and Git version control workflows.",
-    },
-  ],
-
-  // --------------------------------------------------------------------------
-  // 5. EDUCATION RECORD
+  // 3. EDUCATION RECORD
   // --------------------------------------------------------------------------
   education: [
     {
@@ -117,30 +81,10 @@ export const PROFILE_DATA = {
       degree: "B.Tech - Computer Science & Engineering",
       institution: "Parul University (PIET)",
       period: "2022 - 2026",
-      score: "7.71 / 10",
-      scoreLabel: "CGPA",
+      score: "",
+      scoreLabel: "",
       location: "Vadodara, Gujarat",
       details: "Specializing in Computer Science Engineering, Web Development, Software Engineering, and Database Systems.",
-    },
-    {
-      id: "chaitanya",
-      degree: "Class 12th (BIEAP)",
-      institution: "Sri Chaitanya Junior College",
-      period: "2020 - 2022",
-      score: "87.30%",
-      scoreLabel: "Percentage",
-      location: "Ongole, Andhra Pradesh",
-      details: "Mathematics, Physics, and Chemistry (MPC) stream with top academic performance.",
-    },
-    {
-      id: "ramakrishna",
-      degree: "Class 10th (BSEAP)",
-      institution: "Sri Rama Krishna English Medium High School",
-      period: "2019 - 2020",
-      score: "90.67%",
-      scoreLabel: "Percentage",
-      location: "Ongole, Andhra Pradesh",
-      details: "Secondary School Certificate with distinction in Science and Mathematics.",
     },
   ] as EducationItem[],
 
