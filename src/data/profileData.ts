@@ -196,37 +196,6 @@ export const PROFILE_DATA = {
         "Hosted live on PythonAnywhere",
       ],
     },
-    {
-      id: "fullstack-dashboard",
-      title: "Enterprise MERN Task Hub",
-      tagline: "Scalable Task & Workflow Platform",
-      description:
-        "Full-stack web application for task management, user authentication, and data analytics built with React, Node.js, Express, and MongoDB.",
-      tags: ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-      isFeatured: false,
-      status: "In Development",
-      category: "Full Stack",
-      highlights: [
-        "Modular React component architecture with clean state management",
-        "Express REST API endpoints backed by MongoDB",
-        "Responsive dark mode interface",
-      ],
-    },
-    {
-      id: "algorithm-visualizer",
-      title: "Data Structures & Algorithm Visualizer",
-      tagline: "Interactive DSA & Logic Playground",
-      description:
-        "Interactive web application providing visual step-by-step demonstrations of fundamental sorting and searching algorithms.",
-      tags: ["JavaScript", "HTML5 Canvas", "Algorithms", "CSS3"],
-      isFeatured: false,
-      status: "Featured",
-      category: "Web App",
-      highlights: [
-        "Step-by-step array and sorting execution visualizer",
-        "Interactive speed and dataset controls",
-      ],
-    },
   ] as ProjectItem[],
 
   // --------------------------------------------------------------------------
